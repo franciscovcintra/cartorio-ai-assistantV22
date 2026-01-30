@@ -133,24 +133,26 @@ export const analyzeMatricula = async (base64Data: string, mimeType: string): Pr
   3. **Proprietários Atuais:**
      Liste cada proprietário iniciando OBRIGATORIAMENTE pela **fração ideal ou porcentagem** de propriedade antes do nome (Ex: "100% - Nome" ou "50% - Nome").
      
-     Para a qualificação, analise o regime de bens e a forma de aquisição (Onerosa vs Gratuita/Doação/Herança) e aplique as seguintes regras estritas:
+     **REGRAS ESTRITAS DE QUALIFICAÇÃO (PARA TODOS OS CASOS):**
+     * **Regime de Bens:** Sempre especificar se é "anteriormente a Lei Federal 6.515/77" ou "na vigência da Lei 6.515/77", dependendo da data do casamento.
+     * **Pacto Antenupcial:** Se houver menção a pacto antenupcial (comum na Separação Total ou Comunhão Universal pós-77), citar OBRIGATORIAMENTE da seguinte forma: "na vigência da Lei 6.515/77, conforme Escritura de Pacto Antenupcial registrada sob o nº [número do registro] no Livro 3 - Registro Auxiliar do [Nome do Cartório onde foi registrado]".
 
      **CASO 1: SOLTEIRO**
      * Formato: [Fração] - [Nome], [RG/RNE], CPF [CPF], [nacionalidade], solteiro, [profissão], residente e domiciliado em [endereço].
 
      **CASO 2: CASADO - COMUNHÃO UNIVERSAL**
      * O cônjuge SEMPRE é co-proprietário.
-     * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], e seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime da Comunhão Universal de Bens (mencionar se antes ou depois da Lei 6.515/77), residentes em [endereço].
+     * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], e seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime da Comunhão Universal de Bens ([CITAR SE ANTES OU DEPOIS DA LEI 6.515/77 E PACTO SE HOUVER]), residentes em [endereço].
 
      **CASO 3: CASADO - COMUNHÃO PARCIAL OU SEPARAÇÃO OBRIGATÓRIA (LEGAL)**
      * **Se a aquisição foi ONEROSA (Compra e Venda):** O cônjuge tem direito sobre o imóvel.
-       * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], e seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime [Regime], residentes em [endereço].
+       * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], e seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime [Regime] (na vigência da Lei 6.515/77), residentes em [endereço].
      * **Se a aquisição foi GRATUITA (Doação ou Herança/Inventário):** O cônjuge NÃO tem direito, apenas assiste.
-       * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], assistido por seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime [Regime], residentes em [endereço].
+       * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], assistido por seu cônjuge [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], casados sob o regime [Regime] (na vigência da Lei 6.515/77), residentes em [endereço].
 
      **CASO 4: CASADO - SEPARAÇÃO TOTAL (CONVENCIONAL/COM PACTO)**
      * O cônjuge não precisa assinar e nem assistir, apenas ser mencionado.
-     * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], **casado com** [Nome do Cônjuge] sob o regime da Separação Total de Bens (com Pacto Antenupcial), residente e domiciliado em [endereço].
+     * Formato: [Fração] - [Nome], [RG], CPF [CPF], [nacionalidade], [profissão], **casado com** [Nome do Cônjuge] sob o regime da Separação Total de Bens (na vigência da Lei 6.515/77, conforme Escritura de Pacto Antenupcial registrada sob o nº [Nº] no Livro 3 - Registro Auxiliar do [CARTÓRIO]), residente e domiciliado em [endereço].
   `;
 
   try {
